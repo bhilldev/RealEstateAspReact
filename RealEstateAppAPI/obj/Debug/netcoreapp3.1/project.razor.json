@@ -1,0 +1,19 @@
+{
+  "FilePath": "c:\\Users\\Brandon\\Documents\\PortfolioProjects\\RealEstateAppReact\\RealEstateAppAPI\\RealEstateAppAPI.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "3.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "RealEstateAppAPI",
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}
