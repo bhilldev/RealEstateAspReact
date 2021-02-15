@@ -33,7 +33,6 @@ const Houses = ({ classes, ...props }) => {
     const onDelete = id => {
         if (window.confirm('Are you sure to delete this record?'))
             props.deleteHouse(id,()=>addToast("Deleted successfully", { appearance: 'info' }))
-            console.log(id);
     }
     return (
         <Paper className={classes.paper} elevation={3}>
@@ -62,7 +61,7 @@ const Houses = ({ classes, ...props }) => {
                                             <TableCell>
                                                 <ButtonGroup variant="text">
                                                     <Button><EditIcon color="primary"
-                                                        onClick={() => {  setCurrentId(record.houseID) }} /></Button>
+                                                        onClick={() => { setCurrentId(record.houseID) }} /></Button>
                                                     <Button><DeleteIcon color="secondary"
                                                         onClick={() => onDelete(record.houseID)} /></Button>
                                                 </ButtonGroup>

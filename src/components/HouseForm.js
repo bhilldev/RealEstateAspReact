@@ -44,7 +44,7 @@ const HouseForm = ({ classes, ...props }) => {
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
         if ('street' in fieldValues)
-            temp.fullName = fieldValues.street ? "" : "This field is required."
+            temp.street = fieldValues.street ? "" : "This field is required."
         if ('city' in fieldValues)
             temp.city = fieldValues.city ? "" : "This field is required."
         if ('state' in fieldValues)
@@ -71,24 +71,23 @@ const HouseForm = ({ classes, ...props }) => {
 
     const handleSubmit = e => {
         e.preventDefault()
+        console.log("handle submit called")
         if (validate()) {
             const onSuccess = () => {
                 resetForm()
                 addToast("Submitted successfully", { appearance: 'success' })
             }
-            if (props.currentId == 0) {
-                
+            if (props.currentId == 0) {                
                 props.createHouse(values, onSuccess)
             }
-            else {     
-                                    
+            else {                                   
                 props.updateHouse(props.currentId, values, onSuccess)
             }
         }
     }
 
     useEffect(() => {
-        console.log(props.currentId)
+        console.log("useEffect " + props.currentId)
         if (props.currentId != 0) {
             setValues({
                 ...props.HouseList.find(x => x.id == props.currentId)
